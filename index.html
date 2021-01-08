@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aquila</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <link rel="stylesheet" href="sass/main.css">
+  </head>
+  <body>
+ 
+    <div class="home" id="app">
+        <div class="loader" v-if="loading">
+            <div class="loader__container"></div>
+            <div class="loader__content">
+              <div class="loader__icon"></div>
+            </div>
+          </div>
+      <h1 class="home__heading">{{data.name}}</h1>
+      <div class="home__section home__section--left"></div>
+      <div class="home__section home__section--right"></div>
+      <img
+        src="images/image3.jpg"
+        alt="Aquila Aveion Image"
+        class="home__image"
+      />
+      <div class="home__footer">
+        <p class="home__link">HOME</p>
+        <p class="home__link">ABOUT</p>
+        <img
+          src="images/image3.jpg"
+          alt="Aquila Aveion Image"
+          class="home__link--image"
+        />
+        <p class="home__link">GALLERY</p>
+        <p class="home__link">CONTACT</p>
+      </div>
+      <div class="home__side-bar">
+        <a
+          :href="`https://instagram.com/${data.social_media.instagram}`"
+          target="_blank"
+          ><img
+            src="images/instagram.svg"
+            alt="Instagram Icon"
+            class="home__icon"
+        /></a>
+        <a
+          :href="`https://twitter.com/${data.social_media.twitter}`"
+          target="_blank"
+        >
+          <img src="images/twitter.svg" alt="Twitter Icon" class="home__icon"
+        /></a>
+        <a
+          :href="`https://snapchat.com/${data.social_media.snapchat}`"
+          target="_blank"
+        >
+          <img src="images/snapchat.svg" alt="Snapchat Icon" class="home__icon"
+        /></a>
+        <a :href="`mailto: ${data.social_media.email}`" target="_blank">
+          <img src="images/mail.svg" alt="Mail Icon" class="home__icon"
+        /></a>
+      </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+    <script>
+     
+    </script>
+  </body>
+</html>
